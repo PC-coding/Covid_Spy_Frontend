@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import '../App.css';
+import NavBar from './NavBar/Navbar.js';
+// import Router from './NavBar/Router';
+import { BrowserRouter } from 'react-router-dom';
+
+// const useStateWithSessionStorage = (token, defaultValue) => {
+//   const [value, setValue] = useState(sessionStorage.getItem(token) || defaultValue);
+//   return [value, setValue];
+// }
 
 function App() {
+//   const [token, setToken] = useStateWithSessionStorage('token', '');
+//   const [userFav, setUserFav] = useState([]);
+//  console.log(setUserFav);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <BrowserRouter>
+        <div className="app"> 
+          <header className="App-header">
+            <NavBar />
+            {/* <NavBar token={token} setToken={setToken} userFav={userFav} 
+            setUserFav={setUserFav}/> */}
+            {/* <Router token={token} setToken={setToken} userFav={userFav} 
+            setUserFav={setUserFav}/> */}
+          </header>
+        </div>
+    </BrowserRouter>
   );
 }
 
