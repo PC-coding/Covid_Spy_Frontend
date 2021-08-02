@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function globe() {
-    return (
-        <div>
-            
-        </div>
-    )
+export default function Globe() {
+        return(
+            <Link to='/tracker'>
+                <div className="pulse">
+                    <span></span>
+                    <span></span>
+                </div>
+            </Link>
+        )
 }
-
-export default globe
